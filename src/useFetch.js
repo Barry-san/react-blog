@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useEffect } from "react";
-r;
 const useFetch = (url) => {
   const [data, setBlogs] = useState(null);
   const [isPending, setisPending] = useState(true);
