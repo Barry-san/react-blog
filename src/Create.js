@@ -1,13 +1,20 @@
 import { useState } from "react";
+<<<<<<< HEAD
 import { getFirestore } from "firebase/firestore";
 import firebaseApp from "./firebaseConfig";
 
 const Create = () => {
   const db = getFirestore(firebaseApp);
+=======
+// import { History } from "history";
+
+const Create = () => {
+>>>>>>> 52a8660 (added a page to creat Blogs)
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
   const handleSubmit = (e) => {
+<<<<<<< HEAD
     e.preventDefault();
     const blog = { title, content, author: "Yoshi" };
     console.log(db.collection("blogs"));
@@ -15,13 +22,22 @@ const Create = () => {
       .add(blog)
       .then((ref) => console.log("document reference is : " + ref.id));
     console.log(blog);
+=======
+    const blog = { title, content, author: "Yoshi" };
+    console.log(blog);
+    e.preventDefault();
+>>>>>>> 52a8660 (added a page to creat Blogs)
     fetch("http://localhost:8000/blogs", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blog),
+<<<<<<< HEAD
     }).then((res) => {
       console.log(res);
     });
+=======
+    }).then();
+>>>>>>> 52a8660 (added a page to creat Blogs)
   };
   return (
     <div className="create">
