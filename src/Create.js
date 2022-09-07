@@ -32,12 +32,18 @@ const Create = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blog),
 <<<<<<< HEAD
+<<<<<<< HEAD
     }).then((res) => {
       console.log(res);
     });
 =======
     }).then();
 >>>>>>> 52a8660 (added a page to creat Blogs)
+=======
+    }).then((res) => {
+      console.log(res);
+    });
+>>>>>>> 3f19df7 (updated json files and created new component.)
   };
   return (
     <div className="create">
