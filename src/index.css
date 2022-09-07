@@ -1,16 +1,17 @@
 *{
   font-family: Uchen;
+  --red:#f1356d;
+  box-sizing: border-box;
 }
-
 .header {
-  color: #f1356d;
+  /* background-color: whitesmoke; */
+  color: var(--red);
   display: flex;
-  justify-content: space-evenly;
-  max-width: 37.5em;
+  justify-content: space-between;
   border-bottom: 1px solid rgb(236, 236, 236);
   gap: 2em;
   margin: 0 auto;
-  padding: 1.25em;
+  padding: 0.25em 1.25em;
 }
 
 .links {
@@ -22,7 +23,6 @@
 
 a {
   padding: 0.3125em;
-  margin-left: auto;
   text-decoration: none;
   color: black;
   font-family: sans-serif;
@@ -30,12 +30,13 @@ a {
 
 
 a:hover {
-  color: #f1356d;
+  color: var(--red);
   text-decoration: solid;
 }
 
 
 h1 {
+  color: var(--red);
   font-size: 1.312em;
   font-family: "Courier New", Courier, monospace;
 }
@@ -44,14 +45,14 @@ h1 {
   line-height: 1.6;
   font-family: Uchen;
   margin: 2.5em auto;
-  max-width: 37.5em;
+  /* max-width: 37.5em; */
   padding: 1.25em;
 }
 
 
 .preview{
   border-bottom: rgb(236, 236, 236) solid 1px;
-  max-width: 37.5em;
+  /* max-width: 37.5em; */
   margin: 2.5em auto;
   padding: 1em;
 }
@@ -61,5 +62,36 @@ h1 {
 }
 
 .preview h2{
-  color: #f1356d;
+  color: var(--red);
+}
+.form-group{
+  display: grid;
+  max-width: 37.5em;
+  /* margin: 1em; */
+  padding: 1em;
+  font-size: large;
+  gap: .5em;
+}
+.create button{
+  padding: .25rem 1rem;
+  margin: 5px calc(var(--width)/2);
+  background-color: var(--red);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  max-width: 70px;
+}
+
+.create{
+  max-height: 80vh;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  gap: 1em;
+  max-width: 100%;
+  overflow:auto;
+}
+
+@media (max-width: 425) {
+  h1{font-size: 5px;}
 }
