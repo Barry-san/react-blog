@@ -1,5 +1,6 @@
 import { useState } from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { getFirestore } from "firebase/firestore";
 import firebaseApp from "./firebaseConfig";
 
@@ -10,10 +11,18 @@ const Create = () => {
 
 const Create = () => {
 >>>>>>> 52a8660 (added a page to creat Blogs)
+=======
+import { getFirestore } from "firebase/firestore";
+import firebaseApp from "./firebaseConfig";
+
+const Create = () => {
+  const db = getFirestore(firebaseApp);
+>>>>>>> 6c856b9 (trying to commit again smh.)
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
   const handleSubmit = (e) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     e.preventDefault();
     const blog = { title, content, author: "Yoshi" };
@@ -27,6 +36,15 @@ const Create = () => {
     console.log(blog);
     e.preventDefault();
 >>>>>>> 52a8660 (added a page to creat Blogs)
+=======
+    e.preventDefault();
+    const blog = { title, content, author: "Yoshi" };
+    console.log(db.collection("blogs"));
+    db.collection("blogs")
+      .add(blog)
+      .then((ref) => console.log("document reference is : " + ref.id));
+    console.log(blog);
+>>>>>>> 6c856b9 (trying to commit again smh.)
     fetch("http://localhost:8000/blogs", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
