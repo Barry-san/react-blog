@@ -16,7 +16,7 @@ const BlogDetails = () => {
       {data && (
         <div className="blog-content">
           {" "}
-          <p>{data.content}</p>
+          <pre>{data.content}</pre>
         </div>
       )}
     </div>
