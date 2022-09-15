@@ -7,8 +7,8 @@ const Header = () => {
         <h1>FEEL</h1>
       </Link>
       <div className="links">
+        <Link to={"/register"}> Register</Link>
         <Link to={"/signin"}>Login</Link>
-        <Link to={"/create"}> New blog</Link>
       </div>
     </div>
   );
