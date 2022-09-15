@@ -14,12 +14,6 @@ const Header = () => {
           <Link to={"/"}>Log out</Link>
         </div>
       )}
-      {auth.currentUser === null && (
-        <div className="links">
-          <Link to={"/register"}> Register</Link>
-          <Link to={"/signin"}>Login</Link>
-        </div>
-      )}
     </div>
   );
 };
