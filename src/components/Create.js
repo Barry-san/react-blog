@@ -1,13 +1,19 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { database } from "../firebaseConfig";
+import { collection, addDoc } from "firebase/firestore";
 
 const Create = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const blog = { title, content, author: "Yoshi" };
   const navigate = useNavigate();
+  const dbinstance = collection(database, "blogs");
 
   const handleSubmit = (e) => {
+    addDoc(dbinstance, blog).then((Response) => {
+      console.log(Response.type);
+    });
     e.preventDefault();
     console.log(blog);
     fetch("http://localhost:8000/blogs", {
