@@ -1,4 +1,4 @@
-import { app } from "../firebaseConfig";
+// import { app } from "../firebaseConfig";
 import { useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
@@ -18,9 +18,7 @@ const SingIn = () => {
 
   const auth = getAuth();
   const handleClick = () => {
-    signInWithEmailAndPassword(auth, email, password).then((response) => {
-      console.log(response);
-    });
+    signInWithEmailAndPassword(auth, email, password);
   };
   return (
     <div className="login">
