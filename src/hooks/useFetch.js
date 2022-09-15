@@ -6,6 +6,7 @@ const useFetch = (url) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    const arboter = new AbortController();
     fetch(url)
       .then((response) => {
         if (!response.ok) throw Error("something went wrong : (");
@@ -22,6 +23,7 @@ const useFetch = (url) => {
         setError(err.message);
         setisPending(false);
       });
+    return () => arboter.abort();
   }, [url]);
   return { data, isPending, error };
 };
