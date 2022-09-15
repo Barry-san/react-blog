@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Create = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const blog = { title, content, author: "Yoshi" };
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,6 +16,7 @@ const Create = () => {
       body: JSON.stringify(blog),
     }).then((res) => {
       console.log(res);
+      navigate("/");
     });
   };
   return (

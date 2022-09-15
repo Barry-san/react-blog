@@ -1,8 +1,10 @@
-import Header from "./header";
-import Create from "./Create";
-import Article from "./Article";
+import Header from "./components/header";
+import Create from "./components/Create";
+import Article from "./components/Article";
+import NotFound from "./components/NotFound";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import firebaseApp from "./firebaseConfig";
+import SignIn from "./components/Signin";
+import BlogDetails from "./components/BlogDetails";
 
 function App() {
   return (
@@ -12,6 +14,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Article />}></Route>
           <Route path="/create" element={<Create />}></Route>
+          <Route path="/signin" element={<SignIn />}></Route>
+          <Route path="/blog/:id" element={<BlogDetails />}></Route>
+          <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </div>
     </BrowserRouter>
