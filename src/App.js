@@ -6,9 +6,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignIn from "./components/Signin";
 import Register from "./components/Register";
 import BlogDetails from "./components/BlogDetails";
+import { getAuth } from "firebase/auth";
 
 function App() {
+  const auth = getAuth();
+  console.log(auth);
   return (
+    // console.log(Auth)
     <BrowserRouter>
       <div className="App">
         <Header />

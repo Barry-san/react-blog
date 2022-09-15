@@ -2,11 +2,13 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { database } from "../firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
 
 const Create = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const blog = { title, content, author: "Yoshi" };
+  const author = getAuth().currentUser.displayName;
+  const blog = { title, content, author };
   const navigate = useNavigate();
   const dbinstance = collection(database, "blogs");
 
