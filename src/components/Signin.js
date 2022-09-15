@@ -23,7 +23,8 @@ const SingIn = () => {
         console.log(response);
       })
       .catch((err) => {
-        alert(err);
+        console.log(err);
+        alert(err.message);
       });
   };
   return (
