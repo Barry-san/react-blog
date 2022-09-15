@@ -28,13 +28,6 @@ a {
   color: black;
 }
 
-
-a:hover {
-  color: var(--red);
-  text-decoration: solid;
-}
-
-
 h1{
   color: #f1356d;
   font-size: 1.5em;
