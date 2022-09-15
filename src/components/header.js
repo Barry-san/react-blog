@@ -8,7 +8,7 @@ const Header = () => {
       <Link to={"/"}>
         <h1>FEEL</h1>
       </Link>
-      {!auth.currentUser && (
+      {auth.currentUser === null && (
         <div className="links">
           <Link to={"/register"}> Register</Link>
           <Link to={"/signin"}>Login</Link>
