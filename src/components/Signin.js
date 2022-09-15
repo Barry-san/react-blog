@@ -18,7 +18,13 @@ const SingIn = () => {
 
   const auth = getAuth();
   const handleClick = () => {
-    signInWithEmailAndPassword(auth, email, password);
+    signInWithEmailAndPassword(auth, email, password)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => {
+        alert(err);
+      });
   };
   return (
     <div className="login">
