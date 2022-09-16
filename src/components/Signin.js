@@ -39,7 +39,7 @@ const SingIn = () => {
           <label>Email:</label>
           <input
             type="text"
-            placeholder="email"
+            // placeholder="email"
             value={email}
             onChange={handleInput}
           />
@@ -48,7 +48,7 @@ const SingIn = () => {
           <label>Password:</label>
           <input
             type="password"
-            placeholder="password"
+            // placeholder="password"
             value={password}
             onChange={handleInput2}
           />

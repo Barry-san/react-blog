@@ -118,12 +118,17 @@ h1{
 .group{
   display: flex;
   flex-direction: column;
-  gap: .5rem;
-  outline: solid black 2px;
+  gap: 1rem;
+  width: 80%;
 }
-
+input{
+  height: 5vh;
+}
 @media (max-width:420px) {
   .image{
     display: none;
+  }
+  .login-form{
+    grid-column:1/3 ;
   }
 }
