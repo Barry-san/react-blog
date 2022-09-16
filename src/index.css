@@ -97,3 +97,27 @@ h1{
   line-height: 1.65;
   font-size: 1em;
 }
+.login{
+  height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.image{
+  background-image: url(../public/magnus-2051.png);
+  background-size: contain;
+  background-position: center;
+}
+.login-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.group{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  outline: solid black 2px;
+}

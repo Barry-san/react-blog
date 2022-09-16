@@ -18,6 +18,10 @@ const SingIn = () => {
 
   const auth = getAuth();
   const handleClick = () => {
+    if (password.length < 6) {
+      alert("password must have at least 6 characters");
+      return;
+    }
     signInWithEmailAndPassword(auth, email, password)
       .then((response) => {
         console.log(response);
@@ -29,19 +33,30 @@ const SingIn = () => {
   };
   return (
     <div className="login">
-      <input
-        type="text"
-        placeholder="email"
-        value={email}
-        onChange={handleInput}
-      />
-      <input
-        type="password"
-        placeholder="password"
-        value={password}
-        onChange={handleInput2}
-      />
-      <button onClick={handleClick}>login</button>
+      <div className="image"></div>
+      <div className="login-form">
+        <div className="group">
+          <label>Email:</label>
+          <input
+            type="text"
+            placeholder="email"
+            value={email}
+            onChange={handleInput}
+          />
+        </div>
+        <div className="group">
+          <label>Password:</label>
+          <input
+            type="password"
+            placeholder="password"
+            value={password}
+            onChange={handleInput2}
+          />
+        </div>
+        <button onClick={handleClick} className="login-btn">
+          login
+        </button>
+      </div>
     </div>
   );
 };
