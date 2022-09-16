@@ -121,3 +121,9 @@ h1{
   gap: .5rem;
   outline: solid black 2px;
 }
+
+@media (max-width:420px) {
+  .image{
+    display: none;
+  }
+}
